@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/ad5c3d5f14.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Admin</title>
+  </head>
+  <body>
+    <header>
+      <div class="left_header">
+        <div class="logo">
+          <img src="img/PngItem_202688.png" alt="" />
+        </div>
+        <p class="title_booking">Booking Sport</p>
+        <div class="search">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="search" />
+        </div>
+      </div>
+      <div class="right_header">
+        <a href="#" class="block_bgAvatar">
+          <img src="img/khoa.jpg" alt="" class="bgAvatar" />
+          <p>Truong Anh Khoa</p>
+        </a>
+        <ul class="menu_header">
+          <li>
+            <a href="#"><i class="fas fa-home"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="far fa-comment-alt"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="far fa-bell"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-th"></i></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!------------ main_top ----------->
+
+    <div class="main_top">
+      <div class="main_top-left">
+        <a href="#"><i class="fas fa-bars"></i></a>
+        <h3>Dashboard</h3>
+      </div>
+      <div class="main_top-right">
+        <a href="#">Trang chủ</a>
+        <a>/</a>
+        <a href="#">Quản lý chung</a>
+      </div>
+    </div>
+
+    <!--------------------------- slide-bar--------------->
+
+    <div class="slide_bar">
+      <div class="slide_bar-item">
+        <a href="#" class="active">
+          <i class="fas fa-home"></i>
+          <p>Quản lý chung</p>
+        </a>
+      </div>
+      <div class="slide_bar-item">
+        <a href="#">
+          <i class="fas fa-shopping-bag"></i>
+          <p>Sân</p>
+        </a>
+      </div>
+      <div class="slide_bar-item">
+        <a href="#">
+          <i class="far fa-calendar-alt"></i>
+          <p>Quản lý đặt sân</p>
+        </a>
+      </div>
+      <div class="slide_bar-item">
+        <a href="#">
+          <i class="fas fa-users"></i>
+          <p>Khách hàng</p>
+        </a>
+      </div>
+      <div class="slide_bar-item">
+        <a href="#">
+          <i class="fas fa-cog"></i>
+          <p>Cài đặt</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="main_content-wrap">
+    <!-------------------------quản lý chung ------------->
+    <div class="main_content active">
+      <div class="total">
+        <div class="total-item">
+          <div class="text">
+            <h4>10</h4>
+            <p>Đơn đặt sân</p>
+          </div>
+          <i class="far fa-flag"></i>
+        </div>
+        <div class="total-item">
+          <div class="text">
+            <h4>10</h4>
+            <p>Lịch sân</p>
+          </div>
+          <i class="far fa-flag"></i>
+        </div>
+        <div class="total-item">
+          <div class="text">
+            <h4>50</h4>
+            <p>Tổng sân</p>
+          </div>
+          <i class="fas fa-border-all"></i>
+        </div>
+        <div class="total-item">
+          <div class="text">
+            <h4>20</h4>
+            <p>Sân còn trống</p>
+          </div>
+          <i class="fas fa-sign-out-alt"></i>
+        </div>
+      </div>
+      <div class="chart">
+        <canvas class="chart-item" id="checkIncheckOut"></canvas>
+        <canvas class="chart-item" id="availableSport"></canvas>
+      </div>
+      <div class="order_manager">
+        <h3>DANH SÁCH KHÁCH HÀNG ĐẶT SÂN</Datag></h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Tên KH</th>
+              <th>Loại sân đặt</th>
+              <th>Thời gian đặt</th>
+              <th>Tổng đơn</th>
+            </tr>
+          </thead>
+        <tbody>
+          <tr>
+            <td>Nguyen Van A</td>
+            <td>Sân bóng đá 5 người</td>
+            <td>12/10/2021 13:00 - 14:00</td>
+            <td>120.000 VND</td>
+          </tr>
+          <tr>
+            <td>Nguyen Van A</td>
+            <td>Sân bóng đá 5 người</td>
+            <td>12/10/2021 13:00 - 14:00</td>
+            <td>120.000 VND</td>
+          </tr>
+          <tr>
+            <td>Nguyen Van A</td>
+            <td>Sân bóng đá 5 người</td>
+            <td>12/10/2021 13:00 - 14:00</td>
+            <td>120.000 VND</td>
+          </tr>
+          <tr>
+            <td>Nguyen Van A</td>
+            <td>Sân bóng đá 5 người</td>
+            <td>12/10/2021 13:00 - 14:00</td>
+            <td>120.000 VND</td>
+          </tr>
+          <tr>
+            <td>Nguyen Van A</td>
+            <td>Sân bóng đá 5 người</td>
+            <td>12/10/2021 13:00 - 14:00</td>
+            <td>120.000 VND</td>
+          </tr>
+        </tbody>
+       
+        </table>
+        <div class="total_order">
+          <p>Tổng: 600.000VND</p>
+        </div>
+      </div>
+      <div class="total1month">
+        <canvas  id="totalChart"></canvas>
+      </div>
+    </div>
+
+    <!--------------------------sân----------------------->
+    <div class="main_content">
+      <h3 class="title">Danh sách sân</h3>
+      <table class="listPitch">
+        <thead> 
+          <tr>
+            <th>Tên sân</th>
+            <th>Loại sân</th>
+            <th>Trạng thái</th>
+            <th>Thời gian sân HĐ</th>
+            <th>Mô tả</th>
+            <th>Tùy chọn</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img src="https://wesport.asia/wp-content/uploads/2019/12/thanh-tung.jpg" alt="">
+              <p>Sân bóng Bình Thạnh</p>
+            </td>
+            <td>Sân bóng đá 5 người</td>
+            <td style="color: green;">Đang hoạt động</td>
+            <td>7:30 - 21:00</td>
+            <td>Sân bóng đá là một loại hình sân thi đấu của bộ môn Bóng đá. Sân thi đấu hình chữ nhật có chiều dài sân lớn hơn chiều ngang, bề mặt của sân có thể là mặt sân cỏ tự nhiên</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="https://wesport.asia/wp-content/uploads/2019/12/thanh-tung.jpg" alt="">
+              <p>Sân bóng Bình Thạnh</p>
+            </td>
+            <td>Sân bóng đá 7 người</td>
+            <td style="color: green;">Đang hoạt động</td>
+            <td>7:30 - 21:00</td>
+            <td>Sân bóng đá là một loại hình sân thi đấu của bộ môn Bóng đá. Sân thi đấu hình chữ nhật có chiều dài sân lớn hơn chiều ngang, bề mặt của sân có thể là mặt sân cỏ tự nhiên</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="https://wesport.asia/wp-content/uploads/2019/12/thanh-tung.jpg" alt="">
+              <p>Sân bóng Bình Thạnh</p>
+            </td>
+            <td>Sân bóng đá 10 người</td>
+            <td style="color: red;">Tạm đóng</td>
+            <td>7:30 - 21:00</td>
+            <td>Sân bóng đá là một loại hình sân thi đấu của bộ môn Bóng đá. Sân thi đấu hình chữ nhật có chiều dài sân lớn hơn chiều ngang, bề mặt của sân có thể là mặt sân cỏ tự nhiên</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="https://bizweb.dktcdn.net/100/180/757/files/kich-thuoc-san-bong-ro-tieu-chuan.jpg?v=1531377162185" alt="">
+              <p>Sân bóng rổ Bình Thạnh</p>
+            </td>
+            <td>Sân bóng rổ 5 người</td>
+            <td style="color: red;"> Tạm đóng</td>
+            <td>7:30 - 21:00</td>
+            <td>Sân bóng rổ là một loại hình sân thi đấu của bộ môn Bóng đá. Sân thi đấu hình chữ nhật có chiều dài sân lớn hơn chiều ngang, bề mặt của sân có thể là mặt sân cỏ tự nhiên</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+    <div class="main_content"></div>
+    <div class="main_content"></div>
+    <div class="main_content"></div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

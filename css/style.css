@@ -1,0 +1,449 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Festive&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: #f5f5f5;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f5f5;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+header {
+  padding: 15px;
+  display: flex;
+  top: 0;
+  justify-content: space-between;
+  height: 90px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background-color: #f5f5f5;
+}
+.title_booking {
+  font-weight: 500;
+  font-size: 35px;
+  align-self: center;
+  margin-left: 15px;
+  font-family: "Festive", cursive;
+}
+.left_header {
+  display: flex;
+}
+.right_header {
+  display: flex;
+  align-self: center;
+}
+.logo {
+  width: 90px;
+  height: 90px;
+}
+.block_bgAvatar {
+  display: inline-block;
+  border: 2px solid #3ac5c9;
+  width: max-content;
+  padding: 2px 5px;
+  display: flex;
+  text-decoration: none;
+  color: #1f273f;
+  border-radius: 20px;
+  align-items: center;
+  background-color: #ffffff;
+  transition: 0.5s;
+  height: 40px;
+}
+.block_bgAvatar:hover {
+  background-color: RGBA(59, 197, 200, 0.2);
+}
+.block_bgAvatar p {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: 5px;
+}
+.bgAvatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border-width: 10px;
+}
+.menu_header {
+  display: flex;
+}
+
+.menu_header li {
+  background-color: #fff;
+  border: 1px solid #3ac5c9;
+  border-radius: 50%;
+  margin-left: 10px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.menu_header li:hover {
+  background-color: RGBA(59, 197, 200, 0.2);
+}
+.menu_header i {
+  color: #3ac5c9;
+}
+
+.search {
+  position: relative;
+  width: 400px;
+  margin-left: 40px;
+  height: 40px;
+  align-self: center;
+}
+.search i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+}
+.search input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #3ac5c9;
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  padding-left: 35px;
+}
+
+/* --------------body--------- */
+.main_top {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  top: 90px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 15px;
+  border-top: 1px solid #3ac5c9;
+  border-bottom: 1px solid #3ac5c9;
+}
+
+.main_top-left {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+}
+.main_top-left a {
+  align-self: center;
+  color: black;
+  margin-top: -4px;
+}
+.main_top-left i {
+  font-size: 20px;
+}
+.main_top-left h3 {
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.main_top-right {
+  display: flex;
+}
+.main_top-right a {
+  color: #888ea8;
+  font-size: 14px;
+  text-decoration: none;
+  margin-left: 3px;
+}
+
+/* slidebar */
+.slide_bar {
+  width: 250px;
+  padding: 15px;
+  padding-top: 20px;
+  position: fixed;
+  top: 140px;
+  border-right: 1px solid #3ac5c9;
+  height: 100vh;
+  z-index: 2;
+  transform: translateX(-100%);
+  transition: 0.5s;
+}
+.slide_bar.active {
+  transform: translateX(0%);
+}
+.slide_bar-item a.active {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  box-shadow: 2px 3px RGBA(59, 197, 200, 0.5);
+}
+.slide_bar-item a {
+  display: flex;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  transition: 0.5s;
+}
+.slide_bar-item a:hover {
+  display: flex;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: RGBA(59, 197, 200, 0.5);
+}
+.slide_bar-item i {
+  color: #3ac5c9;
+  margin-right: 10px;
+  font-size: 13px;
+  align-self: center;
+}
+
+.slide_bar-item p {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  align-self: center;
+}
+
+/* ---------Quản lý chung--------------- */
+
+.main_content-wrap {
+  margin-top: 140px;
+  background-color: #fff;
+  padding: 15px;
+  transition: 0.5s;
+  width: 100%;
+}
+
+.main_content-wrap.active {
+  transform: translateX(250px);
+  width: calc(100% - 250px);
+}
+.main_content {
+  display: none;
+}
+.main_content.active {
+  display: block;
+}
+.total {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.total-item {
+  display: flex;
+  align-items: center;
+  padding: 30px 20px;
+  border-radius: 20px;
+  justify-content: space-between;
+}
+.total-item:nth-child(1) {
+  background-image: linear-gradient(to right, #59bcff, #59cfff);
+}
+.total-item:nth-child(2) {
+  background-image: linear-gradient(to right, #49d994, #53f097);
+}
+.total-item:nth-child(3) {
+  background-image: linear-gradient(to right, #feb765, #fed87d);
+}
+.total-item:nth-child(4) {
+  background-image: linear-gradient(to right, #ff6c58, #fea771);
+}
+.total-item h4 {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.total-item p {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 18px;
+}
+.total-item i {
+  color: white;
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.chart {
+  margin-top: 40px;
+  width: 49%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  row-gap: 80px;
+  grid-auto-rows: auto;
+}
+
+.order_manager {
+  margin-top: 40px;
+  border-radius: 5px;
+  border: 1px dotted gray;
+  padding: 20px 10px;
+}
+
+.order_manager h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.order_manager table {
+  width: 100%;
+}
+
+.order_manager th {
+  background-color: #3ac5c9;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  padding: 15px;
+}
+
+.order_manager th:first-child {
+  text-align: left;
+}
+
+.order_manager td {
+  padding: 15px;
+  cursor: pointer;
+}
+
+.order_manager td:not(:first-child) {
+  text-align: center;
+}
+
+.order_manager tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+.order_manager tr:hover {
+  background-color: RGBA(59, 197, 200, 0.2);
+}
+.total_order {
+  text-align: right;
+  margin-top: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  color: #3ac5c9;
+  font-weight: 700;
+}
+
+.total1month {
+  margin-top: 40px;
+}
+
+/* =============Sân============== */
+
+.main_content .title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #1f273f;
+}
+
+.listPitch {
+  width: 100%;
+}
+
+.listPitch th {
+  font-family: "Roboto", sans-serif;
+  background-color: #3ac5c9;
+  font-size: 16px;
+  color: white;
+  padding: 15px;
+}
+
+.listPitch th:first-child {
+  text-align: left;
+}
+
+.listPitch td {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  padding: 15px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.listPitch td:first-child {
+  display: flex;
+  width: 410px;
+  align-items: center;
+  height: 250px;
+}
+
+.listPitch td p {
+  font-weight: 500;
+}
+.listPitch td img {
+  margin-right: 20px;
+  width: 200px;
+  height: 120px;
+  border-radius: 5px;
+}
+.listPitch td:not(:first-child) {
+  text-align: center;
+}
+.listPitch td:nth-child(2) {
+  position: relative;
+  top: -40px;
+}
+.listPitch td:nth-child(3) {
+  position: relative;
+  top: -40px;
+}
+.listPitch td:nth-child(4) {
+  position: relative;
+  top: -40px;
+}
+.listPitch td:nth-child(5) {
+  position: relative;
+  top: -60px;
+}
+.listPitch th:nth-child(2) {
+  width: 150px;
+}
+.listPitch th:nth-child(3) {
+  width: 150px;
+}
+.listPitch th:nth-child(4) {
+  width: 200px;
+}
+
+.listPitch th:last-child {
+  text-align: right;
+  width: 100px;
+}
+.listPitch tbody tr {
+  border: 1px solid #3ac5c9;
+}
+
+.listPitch td {
+  border-right: 1px solid #3ac5c9;
+  border-left: 1px solid #3ac5c9;
+}
