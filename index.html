@@ -188,7 +188,10 @@
 
     <!--------------------------sân----------------------->
     <div class="main_content">
-      <h3 class="title">Danh sách sân</h3>
+      <div class="title_block">
+        <h3 class="title">Danh sách sân</h3>
+        <p class="createBtn">+ Tạo sân</p>
+      </div>
       <table class="listPitch">
         <thead> 
           <tr>
@@ -196,58 +199,316 @@
             <th>Loại sân</th>
             <th>Trạng thái</th>
             <th>Thời gian sân HĐ</th>
-            <th>Mô tả</th>
             <th>Tùy chọn</th>
+            <th>Chi tiết</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>
+              <div class="imgTable">
               <img src="https://wesport.asia/wp-content/uploads/2019/12/thanh-tung.jpg" alt="">
+              </div>
               <p>Sân bóng Bình Thạnh</p>
             </td>
             <td>Sân bóng đá 5 người</td>
             <td style="color: green;">Đang hoạt động</td>
             <td>7:30 - 21:00</td>
-            <td>Sân bóng đá là một loại hình sân thi đấu của bộ môn Bóng đá. Sân thi đấu hình chữ nhật có chiều dài sân lớn hơn chiều ngang, bề mặt của sân có thể là mặt sân cỏ tự nhiên</td>
+            <td>
+              <p class="editBtn">Cập Nhật</p>
+              <p class="deleteBtn">Xóa</p>
+            </td>
+            <td>...</td>
           </tr>
           <tr>
             <td>
-              <img src="https://wesport.asia/wp-content/uploads/2019/12/thanh-tung.jpg" alt="">
+              <div class="imgTable">
+                <img src="https://wesport.asia/wp-content/uploads/2019/12/thanh-tung.jpg" alt="">
+              </div>
               <p>Sân bóng Bình Thạnh</p>
             </td>
             <td>Sân bóng đá 7 người</td>
             <td style="color: green;">Đang hoạt động</td>
             <td>7:30 - 21:00</td>
-            <td>Sân bóng đá là một loại hình sân thi đấu của bộ môn Bóng đá. Sân thi đấu hình chữ nhật có chiều dài sân lớn hơn chiều ngang, bề mặt của sân có thể là mặt sân cỏ tự nhiên</td>
-          </tr>
+            <td>
+              <p class="editBtn">Cập Nhật</p>
+              <p class="deleteBtn">Xóa</p>
+            </td>
+            <td>...</td>
+            </tr>
           <tr>
             <td>
+              <div class="imgTable">
               <img src="https://wesport.asia/wp-content/uploads/2019/12/thanh-tung.jpg" alt="">
+              </div>
               <p>Sân bóng Bình Thạnh</p>
             </td>
             <td>Sân bóng đá 10 người</td>
             <td style="color: red;">Tạm đóng</td>
             <td>7:30 - 21:00</td>
-            <td>Sân bóng đá là một loại hình sân thi đấu của bộ môn Bóng đá. Sân thi đấu hình chữ nhật có chiều dài sân lớn hơn chiều ngang, bề mặt của sân có thể là mặt sân cỏ tự nhiên</td>
+            <td>
+              <p class="editBtn">Cập Nhật</p>
+              <p class="deleteBtn">Xóa</p>
+            </td>
+            <td>...</td>
           </tr>
           <tr>
             <td>
+              <div class="imgTable">
               <img src="https://bizweb.dktcdn.net/100/180/757/files/kich-thuoc-san-bong-ro-tieu-chuan.jpg?v=1531377162185" alt="">
+            </div>
               <p>Sân bóng rổ Bình Thạnh</p>
             </td>
             <td>Sân bóng rổ 5 người</td>
             <td style="color: red;"> Tạm đóng</td>
             <td>7:30 - 21:00</td>
-            <td>Sân bóng rổ là một loại hình sân thi đấu của bộ môn Bóng đá. Sân thi đấu hình chữ nhật có chiều dài sân lớn hơn chiều ngang, bề mặt của sân có thể là mặt sân cỏ tự nhiên</td>
+            <td>
+              <p class="editBtn">Cập Nhật</p>
+              <p class="deleteBtn">Xóa</p>
+            </td>
+            <td>...</td>
           </tr>
 
         </tbody>
       </table>
     </div>
-    <div class="main_content"></div>
-    <div class="main_content"></div>
-    <div class="main_content"></div>
+
+    <!----------------------Quản lý đặt sân------------->
+    <div class="main_content">
+      <div class="title_block">
+        <h3 class="title">Quản lý đặt sân</h3>
+      </div>
+      <table class="listPitch listManagerBook">
+        <thead> 
+          <tr>
+            <th>Tên KH</th>
+            <th>SĐT</th>
+            <th>Loại sân đặt</th>
+            <th>Trạng thái</th>
+            <th>Thời gian đặt</th>
+            <th>Giá tiền</th>
+            <th>Tùy chọn</th>
+            <th>Chi tiết</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <p>Nguyễn Văn A</p>
+            </td>
+            <td>0909129812</td>
+            <td>Sân bóng đá 5 người</td>
+            <td style="color: green;">Đang hoạt động</td>
+            <td><p>13/10/2021</p><p>7:30 - 8:30</p</td>
+            <td>120.000 VND</td>
+            <td>
+              <p class="editBtn">Cập Nhật</p>
+              <p class="deleteBtn">Hủy</p>
+            </td>
+            <td>...</td>
+          </tr>
+          <tr>
+            <td>
+              <p>Nguyễn Văn B</p>
+            </td>
+            <td>0909129812</td>
+            <td>Sân bóng đá 5 người</td>
+            <td style="color: green;">Đang hoạt động</td>
+            <td><p>13/10/2021</p><p>7:30 - 8:30</p</td>
+            <td>120.000 VND</td>
+            <td>
+              <p class="editBtn">Cập Nhật</p>
+              <p class="deleteBtn">Hủy</p>
+            </td>
+            <td>...</td>
+          </tr>
+          <tr>
+            <td>
+              <p>Nguyễn Văn C</p>
+            </td>
+            <td>0909129812</td>
+            <td>Sân bóng đá 5 người</td>
+            <td style="color: green;">Đang hoạt động</td>
+            <td><p>13/10/2021</p><p>7:30 - 8:30</p</td>
+            <td>120.000 VND</td>
+            <td>
+              <p class="editBtn">Cập Nhật</p>
+              <p class="deleteBtn">Hủy</p>
+            </td>
+            <td>...</td>
+          </tr>
+          <tr>
+            <td>
+              <p>Nguyễn Văn D</p>
+            </td>
+            <td>0909129812</td>
+            <td>Sân bóng đá 5 người</td>
+            <td style="color: green;">Đang hoạt động</td>
+            <td><p>13/10/2021</p><p>7:30 - 8:30</p</td>
+            <td>120.000 VND</td>
+            <td>
+              <p class="editBtn">Cập Nhật</p>
+              <p class="deleteBtn">Hủy</p>
+            </td>
+            <td>...</td>
+          </tr>
+          <tr>
+            <td>
+              <p>Nguyễn Văn D</p>
+            </td>
+            <td>0909129812</td>
+            <td>Sân bóng đá 5 người</td>
+            <td style="color: green;">Đang hoạt động</td>
+            <td><p>13/10/2021</p><p>7:30 - 8:30</p</td>
+            <td>120.000 VND</td>
+            <td>
+              <p class="editBtn">Cập Nhật</p>
+              <p class="deleteBtn">Hủy</p>
+            </td>
+            <td>...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-----------------------Khách hàng----------------->
+    <div class="main_content">
+      <div class="title_block">
+        <h3 class="title">Khách hàng</h3>
+      </div>
+      <table class="listPitch listGuest">
+        <thead> 
+          <tr>
+            <th>Tên KH</th>
+            <th>SĐT</th>
+            <th>Loại KH</th>
+            <th>Đánh giá</th>
+            <th>Ngày đặt sân</th>
+            <th>Tùy chọn</th>
+            <th>Ghi chú</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <p>Nguyễn Văn A</p>
+            </td>
+            <td>0909129812</td>
+            <td>KH thường</td>
+            <td><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></td>
+            <td><p>13/10/2021</p><p>7:30 - 21:00</p></td>
+            <td>
+              <p class="editBtn">Cập Nhật</p>
+              <p class="deleteBtn">Chặn</p>
+            </td>
+            <td><input type="text" name="" id="">
+              <p class="confirmBtn">Lưu ghi chú</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Nguyễn Văn B</p>
+            </td>
+            <td>0909129812</td>
+            <td>KH thân thiết</td>
+            <td><i class="fas fa-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></td>
+            <td><p>13/10/2021</p><p>7:30 - 21:00</p></td>
+            <td>
+              <p class="editBtn">Cập Nhật</p>
+              <p class="deleteBtn">Chặn</p>
+            </td>
+            <td><input type="text" name="" id="">
+              <p class="confirmBtn">Lưu ghi chú</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Nguyễn Văn C</p>
+            </td>
+            <td>0909129812</td>
+            <td>KH thường</td>
+            <td><i class="fas fa-star"><i class="fas fa-star"><i class="fas fa-star"><i class="fas fa-star"><i class="fas fa-star"></i></td>
+            <td><p>13/10/2021</p><p>7:30 - 21:00</p></td>
+            <td>
+              <p class="editBtn">Cập Nhật</p>
+              <p class="deleteBtn">Chặn</p>
+            </td>
+            <td><input type="text" name="" id="">
+              <p class="confirmBtn">Lưu ghi chú</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Nguyễn Văn D</p>
+            </td>
+            <td>0909129812</td>
+            <td>KH thường</td>
+            <td><i class="fas fa-star"><i class="fas fa-star"><i class="fas fa-star"><i class="fas fa-star"><i class="far fa-star"></i></td>
+            <td><p>13/10/2021</p><p>7:30 - 21:00</p></td>
+            <td>
+              <p class="editBtn">Cập Nhật</p>
+              <p class="deleteBtn">Chặn</p>
+            </td>
+            <td><input type="text" name="" id="">
+              <p class="confirmBtn">Lưu ghi chú</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Nguyễn Văn D</p>
+            </td>
+            <td>0909129812</td>
+            <td>KH thân thiết</td>
+            <td><i class="fas fa-star"><i class="fas fa-star"><i class="fas fa-star"><i class="fas fa-star"><i class="fas fa-star"></i></td>
+            <td><p>13/10/2021</p><p>7:30 - 21:00</p></td>
+            <td>
+              <p class="editBtn">Cập Nhật</p>
+              <p class="deleteBtn">Chặn</p>
+            </td>
+            <td><input type="text" name="" id="">
+              <p class="confirmBtn">Lưu ghi chú</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="main_content setting">
+      <div class="title_block">
+        <h3 class="title">Cài đặt</h3>
+      </div>
+      <div class="text_subtitle">Tài khoản</div>
+      <h2>Tên</h2>
+      <input type="text" value="Nguyen Van A"/>
+      <h2>Mật khẩu</h2>
+      <input type="password" name="" id="" value="1234567">
+      <img src="img/khoa.jpg" alt="" class="avtSetting">
+      <i class="fas fa-camera" id="camera"></i>
+      <div class="text_subtitle">Riêng tư</div>
+      <div class="noti_block">
+      <p>Hiển thị hồ sơ của bạn trên công cụ tìm kiếm.
+        Nếu cài đặt này bị tắt, Socimo vẫn có thể gửi cho bạn các tin nhắn liên quan đến tài khoản của bạn, thông báo dịch vụ bắt buộc, thông báo pháp lý và các vấn đề về quyền riêng tư</p>
+        <div class="notibtn">
+          <input type="checkbox" id="switch" class="switch-input"/>
+              <label for="switch" class="switch"></label>
+        </div>
+      </div>
+        <div class="text_subtitle">Thông báo</div>
+      <div class="noti_block">
+        <p>Tắt thông báo khi có sân đặt</p>
+        <div class="notibtn">
+          <input type="checkbox" id="switch" class="switch-input"/>
+              <label for="switch" class="switch"></label>
+        </div>
+      </div>
+      <div class="noti_block">
+        <p>Tắt thông báo nhận tin nhắn từ người lạ</p>
+        <div class="notibtn">
+          <input type="checkbox" id="switch" class="switch-input"/>
+              <label for="switch" class="switch"></label>
+        </div>
+      </div>
+      <button class="saveBtn">Lưu</button>
+      <button class="logOutBtn">Đăng xuất</button>
+    </div>
   </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/index.js"></script>

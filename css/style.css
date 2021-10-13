@@ -356,94 +356,302 @@ header {
 }
 
 /* =============Sân============== */
-
-.main_content .title {
+.main_content .title_block {
+  display: flex;
+  justify-content: space-between;
   margin-top: 15px;
   margin-bottom: 15px;
+}
+.main_content .title_block .createBtn {
+  color: #3ac5c9;
+  background-color: white;
+  border: 1px solid #3ac5c9;
+  padding: 5px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 20px;
+}
+.main_content .title_block .createBtn:hover {
+  color: white;
+  background-color: #3ac5c9;
+  border: 1px solid #3ac5c9;
+}
+.main_content .title {
   font-size: 20px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: #1f273f;
 }
 
-.listPitch {
+.listPitch thead th {
+  background-color: #3ac5c9;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: white;
+  padding: 20px 10px;
+  align-self: center;
+}
+.listPitch tbody td {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+}
+.listPitch tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+.listPitch tbody td:first-child {
+  display: flex;
+  width: max-content;
+  align-items: flex-end;
+}
+.listPitch tbody td:nth-child(2) {
+  width: 180px;
+}
+.listPitch tbody td:nth-child(3) {
+  width: 180px;
+}
+.listPitch tbody td:nth-child(4) {
+  width: 180px;
+}
+.listPitch tbody td:nth-child(5) {
+  display: flex;
+}
+.listPitch tbody td:last-child {
+  cursor: pointer;
+  width: 80px;
+}
+.listPitch tbody td:nth-child(5) p {
+  margin-right: 10px;
+}
+.listPitch tbody .imgTable {
+  width: 210px;
+  height: 120px;
+  margin-right: 10px;
+}
+
+.listPitch tbody td:first-child p {
+  font-weight: 500;
+}
+.editBtn {
+  color: #3ac5c9;
+  border: 1px solid #3ac5c9;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.editBtn:hover {
+  background-color: #3ac5c9;
+  color: white;
+}
+.deleteBtn {
+  border: 1px solid red;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: red;
+  width: 80px;
+  transition: 0.5s;
+}
+.deleteBtn:hover {
+  background-color: red;
+  color: white;
+}
+.listPitch tbody img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =============Quản lý sân===========*/
+.listManagerBook tbody td:nth-child(5) {
+  flex-direction: column;
+  width: 180px;
+}
+.listManagerBook tbody td:nth-child(5) p {
+  margin-bottom: 5px;
+}
+.listManagerBook tbody td:nth-child(6) {
+  width: 180px;
+}
+.listManagerBook tbody td:nth-child(7) {
+  width: 180px;
+}
+
+.listManagerBook tbody td:nth-child(7) .deleteBtn {
+  margin-top: 10px;
   width: 100%;
 }
 
-.listPitch th {
-  font-family: "Roboto", sans-serif;
-  background-color: #3ac5c9;
-  font-size: 16px;
-  color: white;
-  padding: 15px;
-}
-
-.listPitch th:first-child {
+/* =============Khách hàng===============*/
+.listGuest thead th:nth-child(1) {
+  width: 180px;
   text-align: left;
 }
+.listGuest tbody td:nth-child(5) {
+  width: 180px;
+  display: block;
+}
+.listGuest tbody td:nth-child(5) p {
+  margin-bottom: 5px;
+}
+.listGuest tbody td:nth-child(6) {
+  width: 180px;
+}
+.listGuest tbody td:nth-child(6) .deleteBtn {
+  margin-top: 10px;
+  width: 100%;
+}
 
-.listPitch td {
+.listGuest tbody td:last-child input {
+  border: 1px solid black;
+  height: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.confirmBtn {
+  color: green;
+  border: 1px solid green;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-top: 10px;
+}
+.confirmBtn:hover {
+  background-color: green;
+  color: white;
+}
+
+/* ====================Setting================= */
+.logOutBtn {
+  color: #3ac5c9;
+  border: 1px solid #3ac5c9;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.5s;
+  width: max-content;
+  background-color: white;
+}
+
+.logOutBtn:hover {
+  background-color: #3ac5c9;
+  color: white;
+}
+
+.switch {
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  height: 25px;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 100rem;
+  transition: background-color 0.25s linear;
+  border: 1px solid #3ac5c9;
+  right: 120px;
+}
+.switch:after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #3ac5c9;
+  top: 3px;
+  left: 5px;
+  transition: background-color 0.25s linear, transform 0.25s linear;
+}
+.switch-input {
+  display: none;
+}
+.switch-input:checked + .switch {
+  background-color: #3ac5c9;
+}
+.switch-input:checked + .switch:after {
+  transform: translateX(100%);
+  background-color: white;
+}
+
+/* ================Cài đặt================= */
+.text_subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.setting h2 {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  padding: 15px;
-  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+.setting input {
+  margin-left: 10px;
+  border: 1px solid #3ac5c9;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  padding: 5px 10px;
+  width: 350px;
+  height: 40px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.avtSetting {
+  width: 200px;
+  object-fit: cover;
+  height: 200px;
+  position: absolute;
+  right: 100px;
+  top: 50px;
+  border-radius: 50%;
+}
+
+#camera {
+  position: absolute;
+  top: 220px;
+  right: 100px;
   cursor: pointer;
 }
 
-.listPitch td:first-child {
+.noti_block {
+  margin-left: 10px;
   display: flex;
-  width: 410px;
-  align-items: center;
-  height: 250px;
+  justify-content: space-between;
+  margin-top: 15px;
 }
-
-.listPitch td p {
-  font-weight: 500;
+.noti_block p {
+  margin-top: 10px;
+  width: 600px;
+  line-height: 1.5;
 }
-.listPitch td img {
-  margin-right: 20px;
-  width: 200px;
-  height: 120px;
-  border-radius: 5px;
-}
-.listPitch td:not(:first-child) {
-  text-align: center;
-}
-.listPitch td:nth-child(2) {
-  position: relative;
-  top: -40px;
-}
-.listPitch td:nth-child(3) {
-  position: relative;
-  top: -40px;
-}
-.listPitch td:nth-child(4) {
-  position: relative;
-  top: -40px;
-}
-.listPitch td:nth-child(5) {
-  position: relative;
-  top: -60px;
-}
-.listPitch th:nth-child(2) {
-  width: 150px;
-}
-.listPitch th:nth-child(3) {
-  width: 150px;
-}
-.listPitch th:nth-child(4) {
-  width: 200px;
-}
-
-.listPitch th:last-child {
-  text-align: right;
-  width: 100px;
-}
-.listPitch tbody tr {
+.saveBtn {
+  color: white;
+  background-color: #3ac5c9;
   border: 1px solid #3ac5c9;
-}
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.5s;
+  width: 97px;
 
-.listPitch td {
-  border-right: 1px solid #3ac5c9;
-  border-left: 1px solid #3ac5c9;
+  margin-right: 10px;
+}
+.saveBtn:hover {
+  border: 1px solid #3ac5c9;
+  background-color: white;
+  color: #3ac5c9;
 }
