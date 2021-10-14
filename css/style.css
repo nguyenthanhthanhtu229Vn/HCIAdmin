@@ -384,6 +384,9 @@ header {
   color: #1f273f;
 }
 
+.listPitch {
+  width: 100%;
+}
 .listPitch thead th {
   background-color: #3ac5c9;
   font-family: "Roboto", sans-serif;
@@ -410,13 +413,14 @@ header {
   width: 180px;
 }
 .listPitch tbody td:nth-child(3) {
-  width: 180px;
+  width: 160px;
 }
 .listPitch tbody td:nth-child(4) {
-  width: 180px;
+  width: 160px;
 }
 .listPitch tbody td:nth-child(5) {
   display: flex;
+  justify-content: space-between;
 }
 .listPitch tbody td:last-child {
   cursor: pointer;
@@ -441,6 +445,7 @@ header {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.5s;
+  width: 100%;
 }
 .editBtn:hover {
   background-color: #3ac5c9;
@@ -452,7 +457,7 @@ header {
   border-radius: 5px;
   cursor: pointer;
   color: red;
-  width: 80px;
+  width: 100%;
   transition: 0.5s;
 }
 .deleteBtn:hover {
@@ -470,6 +475,7 @@ header {
 .listManagerBook tbody td:nth-child(5) {
   flex-direction: column;
   width: 180px;
+  margin: 0 auto;
 }
 .listManagerBook tbody td:nth-child(5) p {
   margin-bottom: 5px;
@@ -494,6 +500,7 @@ header {
 .listGuest tbody td:nth-child(5) {
   width: 180px;
   display: block;
+  margin: 0 auto;
 }
 .listGuest tbody td:nth-child(5) p {
   margin-bottom: 5px;
@@ -615,7 +622,7 @@ header {
   height: 200px;
   position: absolute;
   right: 100px;
-  top: 50px;
+  top: 30px;
   border-radius: 50%;
 }
 
