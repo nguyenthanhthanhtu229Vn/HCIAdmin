@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Admin</title>
   </head>
-  <body>
+  <body>   
+   <!----------Header------------->
+
     <header>
       <div class="left_header">
         <div class="logo">
@@ -46,8 +48,36 @@
       </div>
     </header>
 
-    <!------------ main_top ----------->
+    <!------------form tạo sân---------->
+    <div class="layout"></div>
+    <div class="create_Pitch">
+      <p class="close">X</p>
+      <form action="" id="formCreate">
+      <input type="text" name="" id="namePitch" placeholder="Tên sân" autocomplete="off">
+      <select name="" id="typePitch">
+        <option>Sân bóng 5 người</option>
+        <option>Sân bóng 7 người</option>
+        <option>Sân bóng 11 người</option>
+        <option>Sân bóng rổ</option>
+        <option>Sân bóng cầu lông</option>
+        <option>Sân bóng bàn</option>
+      </select>
+      <input type="time" name="" id="timeStart">
+      <input type="time" name="" id="timeEnd">
+      <input type="text" placeholder="Giá tiền" id="pricePitch" autocomplete="off">
+      <select name="" id="statusPitch" >
+        <option>Đang hoạt động</option>
+        <option>Tạm đóng</option>
+      </select>
+      <input type="file" name="" id="">
+      </form>
+     <div class="action">
+       <button class="createButton">Tạo sân</button>
+        <button class="cancel">Hủy</button>
+      </div>
+   </div>
 
+    <!------------ main_top ----------->
     <div class="main_top">
       <div class="main_top-left">
         <a href="#"><i class="fas fa-bars"></i></a>
@@ -181,6 +211,52 @@
           <p>Tổng: 600.000VND</p>
         </div>
       </div>
+      <div class="order_manager">
+        <h3>Quản lý sân</Datag></h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Tên sân</th>
+              <th>Loại sân</th>
+              <th>Địa chỉ</th>
+              <th>Mô tả</th>
+            </tr>
+          </thead>
+        <tbody>
+          <tr>
+            <td>Sân Bình Thạnh</td>
+            <td>Sân bóng đá</td>
+            <td>228 Nơ Trang Long, Q.Bình Thạnh</td>
+            <td>Loại sân bóng cỏ nhân tạo</td>
+          </tr>
+          <tr>
+            <td>Sân Hoa Lư</td>
+            <td>Sân bóng rổ</td>
+            <td>228 Nơ Trang Long, Q.Bình Thạnh</td>
+            <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, hic ad eos quide</td>
+          </tr>
+          <tr>
+            <td>Sân Hoa Sen</td>
+            <td>Sân cầu lông</td>
+            <td>228 Nơ Trang Long, Q.Bình Thạnh</td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ro distinctio velit minus obcaecati odit?</td>
+          </tr>
+          <tr>
+            <td>Sân Golf Hiệp Phát</td>
+            <td>Sân Golf</td>
+            <td>228 Nơ Trang Long, Q.Bình Thạnh</td>
+            <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit.ique maiores in quae qui vitae. Doloribus, non quo.</td>
+          </tr>
+          <tr>
+            <td>Sân Bình Thạnh</td>
+            <td>Sân bóng đá</td>
+            <td>228 Nơ Trang Long, Q.Bình Thạnh</td>
+            <td>Lorem ipsum dolor sit aspernatur cupiditate nulla illo adipisci et, ea iure, debitis, autem pariatur aut quidem.</td>
+          </tr>
+        </tbody>
+       
+        </table>
+      </div>
       <div class="total1month">
         <canvas  id="totalChart"></canvas>
       </div>
@@ -192,7 +268,7 @@
         <h3 class="title">Danh sách sân</h3>
         <p class="createBtn">+ Tạo sân</p>
       </div>
-      <table class="listPitch">
+      <table class="listPitch pitch">
         <thead> 
           <tr>
             <th>Tên sân</th>
@@ -203,7 +279,7 @@
             <th>Chi tiết</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody  id="listPitch">
           <tr>
             <td>
               <div class="imgTable">

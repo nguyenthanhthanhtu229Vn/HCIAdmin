@@ -152,3 +152,99 @@ const configBar = {
 var myChart = new Chart(document.getElementById("checkIncheckOut"), config);
 var myChart2 = new Chart(document.getElementById("availableSport"), configBar);
 var myChart3 = new Chart(document.getElementById("totalChart"), config1Year);
+
+// Tạo sân
+let btnCreate = document.querySelector(".main_content .createBtn");
+let layout = document.querySelector(".layout");
+let create_Pitch = document.querySelector(".create_Pitch");
+let main_top = document.querySelector(".main_top");
+btnCreate.addEventListener("click", function (e) {
+  layout.classList.add("active");
+  create_Pitch.classList.add("active");
+  main_top.classList.add("active");
+});
+
+let close = document.querySelector(".create_Pitch .close");
+close.addEventListener("click", function (e) {
+  layout.classList.remove("active");
+  create_Pitch.classList.remove("active");
+  main_top.classList.remove("active");
+});
+
+let namePitch = document.getElementById("namePitch");
+let typePitch = document.getElementById("typePitch");
+let timeStart = document.getElementById("timeStart");
+let timeEnd = document.getElementById("timeEnd");
+let pricePitch = document.getElementById("pricePitch");
+let statusPitch = document.getElementById("statusPitch");
+let createButton = document.querySelector(".action .createButton");
+let listPitch = document.getElementById("listPitch");
+let row = document.createElement("tr");
+let column1 = document.createElement("td");
+let column2 = document.createElement("td");
+let column3 = document.createElement("td");
+let column4 = document.createElement("td");
+let column5 = document.createElement("td");
+let column6 = document.createElement("td");
+let div = document.createElement("div");
+div.classList.add("imgTable");
+let p = document.createElement("p");
+let img = document.createElement("img");
+let editBtn = document.createElement("p");
+editBtn.classList.add("editBtn");
+let deleteBtn = document.createElement("p");
+deleteBtn.classList.add("deleteBtn");
+img.src =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdVCRj2Zr3MWYKnfQ0ocXC4JjzqR2UYCwJCg&usqp=CAU";
+namePitch.addEventListener("change", function (e) {
+  p.innerHTML = namePitch.value;
+});
+typePitch.addEventListener("change", function (e) {
+  column2.innerHTML = typePitch.value;
+});
+statusPitch.addEventListener("change", function (e) {
+  column3.innerHTML = statusPitch.value;
+});
+timeStart.addEventListener("change", function (e) {
+  column4.innerHTML = timeStart.value + "-" + timeEnd.value;
+});
+timeEnd.addEventListener("change", function (e) {
+  column4.innerHTML = timeStart.value + "-" + timeEnd.value;
+});
+
+createButton.addEventListener("click", function (e) {
+  p.innerHTML = namePitch.value;
+  column2.innerHTML = typePitch.value;
+  column3.innerHTML = statusPitch.value;
+  column4.innerHTML = timeStart.value + "-" + timeEnd.value;
+  editBtn.innerHTML = "Sửa";
+  deleteBtn.innerHTML = "Xóa";
+  column6.innerHTML = "...";
+  if (statusPitch.value == "Đang hoạt động") {
+    column3.style.color = "green";
+  } else {
+    column3.style.color = "red";
+  }
+  div.appendChild(img);
+  column1.appendChild(div);
+  column1.appendChild(p);
+  column5.appendChild(editBtn);
+  column5.appendChild(deleteBtn);
+  row.appendChild(column1);
+  row.appendChild(column2);
+  row.appendChild(column3);
+  row.appendChild(column4);
+  row.appendChild(column5);
+  row.appendChild(column6);
+  listPitch.appendChild(row);
+  alert("Tạo sân thành công");
+});
+
+let deleteAction = document.querySelectorAll(".pitch .deleteBtn");
+let pitchTr = document.querySelectorAll(".pitch tbody tr");
+deleteAction.forEach((element, index) => {
+  element.addEventListener("click", function (e) {
+    // pitchTr[index].style.display = "none";
+    console.log(item);
+  });
+});
