@@ -197,34 +197,33 @@ deleteBtn.classList.add("deleteBtn");
 img.src =
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdVCRj2Zr3MWYKnfQ0ocXC4JjzqR2UYCwJCg&usqp=CAU";
 namePitch.addEventListener("change", function (e) {
-  p.innerHTML = namePitch.value;
+  p.textContent = namePitch.value;
 });
 typePitch.addEventListener("change", function (e) {
-  column2.innerHTML = typePitch.value;
+  column2.textContent = typePitch.value;
 });
 statusPitch.addEventListener("change", function (e) {
-  column3.innerHTML = statusPitch.value;
+  column3.textContent = statusPitch.value;
 });
 timeStart.addEventListener("change", function (e) {
-  column4.innerHTML = timeStart.value + "-" + timeEnd.value;
+  column4.textContent = timeStart.value + "-" + timeEnd.value;
 });
 timeEnd.addEventListener("change", function (e) {
-  column4.innerHTML = timeStart.value + "-" + timeEnd.value;
+  column4.textContent = timeStart.value + "-" + timeEnd.value;
 });
-
+p.textContent = namePitch.value;
+column2.textContent = typePitch.value;
+column3.textContent = statusPitch.value;
+column4.textContent = timeStart.value + "-" + timeEnd.value;
+editBtn.textContent = "Sửa";
+deleteBtn.textContent = "Xóa";
+column6.textContent = "...";
+if (statusPitch.value == "Đang hoạt động") {
+  column3.style.color = "green";
+} else {
+  column3.style.color = "red";
+}
 createButton.addEventListener("click", function (e) {
-  p.innerHTML = namePitch.value;
-  column2.innerHTML = typePitch.value;
-  column3.innerHTML = statusPitch.value;
-  column4.innerHTML = timeStart.value + "-" + timeEnd.value;
-  editBtn.innerHTML = "Sửa";
-  deleteBtn.innerHTML = "Xóa";
-  column6.innerHTML = "...";
-  if (statusPitch.value == "Đang hoạt động") {
-    column3.style.color = "green";
-  } else {
-    column3.style.color = "red";
-  }
   div.appendChild(img);
   column1.appendChild(div);
   column1.appendChild(p);
@@ -242,9 +241,28 @@ createButton.addEventListener("click", function (e) {
 
 let deleteAction = document.querySelectorAll(".pitch .deleteBtn");
 let pitchTr = document.querySelectorAll(".pitch tbody tr");
+let deleteConfirm = document.querySelector(".confirm_delete");
 deleteAction.forEach((element, index) => {
   element.addEventListener("click", function (e) {
-    // pitchTr[index].style.display = "none";
-    console.log(item);
+    layout.classList.add("active");
+    main_top.classList.add("active");
+    deleteConfirm.classList.add("active");
+    let btnSuccess = document.querySelector(
+      ".confirm_delete .option button:first-child"
+    );
+    let btnCancel = document.querySelector(
+      ".confirm_delete .option button:last-child"
+    );
+    btnSuccess.addEventListener("click", function (e) {
+      pitchTr[index].style.display = "none";
+      layout.classList.remove("active");
+      main_top.classList.remove("active");
+      deleteConfirm.classList.remove("active");
+    });
+    btnCancel.addEventListener("click", function (e) {
+      layout.classList.remove("active");
+      main_top.classList.remove("active");
+      deleteConfirm.classList.remove("active");
+    });
   });
 });
